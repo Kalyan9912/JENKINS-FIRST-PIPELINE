@@ -1,0 +1,14 @@
+STEP:1-Developer made changes in his code he will push the code into VCS(github)
+SETP:2-configure a trigger with jenkingwith github  using webhooks  so that whenever developer made a pull or push request  CI pipelines will trigger.
+STEP:3 As a part of CI process we will follow the jenkins piepline 
+         --first stage will be be check out the code from github
+         --second step will be build & unit test
+         --third  step  static code analysis 
+         --fourth step will be build docker image 
+         --fifth step will be push docker image to docker registery which is dockerhub
+
+STEP:4 As a part of CD process we will follow the GITOPS apporch
+STEP:5 In CD  part  image updater will watch for image and updates the kubernetes manifests repo with new tags
+STEP:6 argo Cd continueously watch git repo &argoCd detects changes in manifests repo and sync the deployment in the kubernetes cluster 
+STEP:7NOte:----- for every stage or step we will configure the notification  emain notiification so that if pipelines got failed we will get notification
+STEP:8
